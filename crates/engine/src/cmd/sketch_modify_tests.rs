@@ -1972,3 +1972,15 @@ fn fillet_radius_accepts_a_leading_equals_sign() {
     let plain = run(&mut s, "sketch.fillet", json!({"point": "c.end", "radius": "= 2 mm"}));
     assert!(plain["curves"].is_array());
 }
+
+#[test]
+fn probe_5498_move_circle_whose_center_sits_on_an_unmoved_line() {
+    let mut s = new_sketch();
+    let base = ids(&run(&mut s, "sketch.line", json!({"points": [[-100, 0], [100, 0]]}))["curves"])[0].clone();
+    let c = ids(&run(&mut s, "sketch.circle.center", json!({"center": [10, 0], "radius": 5}))["curves"])[0].clone();
+    run(&mut s, "sketch.constraint.coincident", json!({"a": format!("{c}.center"), "b": base}));
+    run(&mut s, "sketch.move", json!({"entities": [c], "translate": [50, 20]}));
+    let sk = sketch(&s);
+    let at = sk.center(sk.curve_index(&c).unwrap()).unwrap();
+    eprintln!("PROBE center after move = {at:?}");
+}
