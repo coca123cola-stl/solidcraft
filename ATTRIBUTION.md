@@ -164,6 +164,7 @@ Editable drawing code, native projects and shipped exports are collected under `
 | assets/styles/ui/themes/cupertino.json | SolidCraft contributors | original SolidCraft theme file | MIT OR Apache-2.0 |
 | assets/styles/ui/themes/green-phosphor.json | SolidCraft contributors | original SolidCraft theme file | MIT OR Apache-2.0 |
 | assets/styles/ui/themes/amber-phosphor.json | SolidCraft contributors | original SolidCraft theme file | MIT OR Apache-2.0 |
+| assets/styles/ui/themes/warm-gold-dark.json | SolidCraft contributors | original SolidCraft theme file | MIT OR Apache-2.0 |
 | assets/styles/ui/themes/blueprint.json | SolidCraft contributors | original SolidCraft theme file | MIT OR Apache-2.0 |
 | assets/styles/ui/themes/one-dark.json | SolidCraft contributors | original SolidCraft theme file with colours adapted from the One Dark palette (Atom One Dark by GitHub Atom, https://github.com/atom/atom, MIT) | MIT OR Apache-2.0 |
 | assets/styles/ui/themes/tokyo-night.json | SolidCraft contributors | original SolidCraft theme file adapting the colours of a published palette (Tokyo Night by enkia, https://github.com/enkia/tokyo-night-vscode-theme, MIT) | MIT OR Apache-2.0 |
